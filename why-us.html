@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Sri Win Education's mission, history, and the expert management team behind our success.">
+  <title>Why Us | Sri Win Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <canvas class="preloader__canvas"></canvas>
+    <div class="preloader__content">
+      <div class="preloader__logo">Sri Win <span>Education</span></div>
+      <p class="preloader__tagline">Your Gateway to Global Education</p>
+      <div class="preloader__progress">
+        <div class="preloader__progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header site-header--transparent" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo"><img src="images/logo.png" alt="Sri Win Education"></a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Home</a></li>
+          <li class="main-nav__item"><a href="why-us.html" class="main-nav__link main-nav__link--active">Why Us</a></li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Admission Open Now</a>
+            <div class="main-nav__dropdown">
+              <a href="admission-china.html" class="main-nav__dropdown-link">China</a>
+              <a href="admission-finland.html" class="main-nav__dropdown-link">Finland</a>
+              <a href="admission-hungary.html" class="main-nav__dropdown-link">Hungary</a>
+              <a href="admission-newzealand.html" class="main-nav__dropdown-link">New Zealand</a>
+              <a href="admission-singapore.html" class="main-nav__dropdown-link">Singapore</a>
+              <a href="admission-uk.html" class="main-nav__dropdown-link">UK</a>
+              <a href="admission-spain.html" class="main-nav__dropdown-link">Spain</a>
+              <a href="admission-romania.html" class="main-nav__dropdown-link">Romania</a>
+              <a href="admission-sweden.html" class="main-nav__dropdown-link">Sweden</a>
+              <a href="admission-ireland.html" class="main-nav__dropdown-link">Ireland</a>
+              <a href="admission-india.html" class="main-nav__dropdown-link">India</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="services.html" class="main-nav__link">Services</a>
+            <div class="main-nav__dropdown">
+              <a href="services.html#visa" class="main-nav__dropdown-link">Visa</a>
+              <a href="services.html#destinations" class="main-nav__dropdown-link">Destination</a>
+              <a href="services.html#business-tours" class="main-nav__dropdown-link">Business Tours</a>
+              <a href="services.html#airline" class="main-nav__dropdown-link">Air Line &amp; Ticketing</a>
+              <a href="services.html#hotel" class="main-nav__dropdown-link">Hotel &amp; Taxi Booking</a>
+              <a href="services.html#cargo" class="main-nav__dropdown-link">Cargo</a>
+              <a href="https://sriwinlankatravels.com/" class="main-nav__dropdown-link main-nav__dropdown-link--external" target="_blank" rel="noopener">In Bound Tours <i class="ph ph-arrow-square-out"></i></a>
+            </div>
+          </li>
+          <li class="main-nav__item"><a href="scholarship-loans.html" class="main-nav__link">Scholarship &amp; Loans</a></li>
+          <li class="main-nav__item"><a href="photo-gallery.html" class="main-nav__link">Photo Gallery</a></li>
+          <li class="main-nav__item"><a href="testimonials.html" class="main-nav__link">Testimonials</a></li>
+          <li class="main-nav__item"><a href="contact.html" class="main-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav">
+<button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu"></button>
+    <a href="index.html" class="mobile-nav__link">Home</a>
+    <a href="about.html" class="mobile-nav__link">About SriWin</a>
+    <a href="team.html" class="mobile-nav__link">Management Team</a>
+    <a href="services.html" class="mobile-nav__link">Services</a>
+    <a href="scholarship-loans.html" class="mobile-nav__link">Scholarship &amp; Loans</a>
+    <a href="photo-gallery.html" class="mobile-nav__link">Photo Gallery</a>
+    <a href="testimonials.html" class="mobile-nav__link">Testimonials</a>
+    <a href="contact.html" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="country-hero" style="min-height: 50vh;">
+      <div class="country-hero__bg">
+        <img src="images/sweden-campus.jpg" alt="Team collaboration" loading="eager">
+      </div>
+      <div class="country-hero__overlay"></div>
+      <div class="country-hero__content">
+        <span class="section__label" style="color: var(--color-secondary); margin-bottom: var(--space-2);">About Us</span>
+        <h1 class="country-hero__title">Why Choose Sri Win Education</h1>
+        <p class="country-hero__desc">A legacy of trust, excellence, and student success spanning over 15 years.</p>
+      </div>
+    </section>
+
+    <!-- About Split Section -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-split__media" data-animate="slide-left">
+            <img src="images/about-office.jpg" alt="Sri Win Education office team" class="about-split__img" loading="lazy">
+            <div class="about-split__badge">
+              <div class="about-split__badge-number">15+</div>
+              <div class="about-split__badge-text">Years of Excellence</div>
+            </div>
+          </div>
+
+          <div class="about-split__content" data-animate="slide-right">
+            <span class="section__label">Our Story</span>
+            <h2 class="section__title" id="about-title">Empowering Dreams Since 2009</h2>
+            <p class="section__desc">Sri Win Education was founded with a singular mission: to bridge the gap between ambitious Sri Lankan students and world-class educational institutions overseas.</p>
+            <p class="section__desc">Over the past 15 years, we have grown from a small consultancy into one of the nation's most trusted education and visa agencies, having successfully placed over 5,000 students across 22 countries.</p>
+            <p class="section__desc">Our commitment goes beyond paperwork. We provide personalized counseling, visa interview coaching, pre-departure briefings, and post-arrival support — ensuring every student feels confident at every step.</p>
+
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="about-feature__icon"><i class="ph ph-seal-check"></i></div>
+                <div>
+                  <p class="about-feature__title">98% Visa Success</p>
+                  <p class="about-feature__desc">Expert documentation & interviews</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature__icon"><i class="ph ph-users"></i></div>
+                <div>
+                  <p class="about-feature__title">Personalized Counseling</p>
+                  <p class="about-feature__desc">One-on-one guidance for every student</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature__icon"><i class="ph ph-globe"></i></div>
+                <div>
+                  <p class="about-feature__title">Global Network</p>
+                  <p class="about-feature__desc">Partnerships across 22+ countries</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature__icon"><i class="ph ph-hand-heart"></i></div>
+                <div>
+                  <p class="about-feature__title">End-to-End Support</p>
+                  <p class="about-feature__desc">From inquiry to arrival & beyond</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Team -->
+    <section class="section section--light" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Leadership</span>
+          <h2 class="section__title" id="team-title">Our Management Team</h2>
+          <p class="section__desc mx-auto">Meet the experienced professionals who lead Sri Win Education with passion and integrity.</p>
+        </header>
+
+        <div class="team-grid">
+          <article class="team-card" data-animate>
+            <div class="team-card__img-wrap">
+              <img src="images/team-member-1.jpg" alt="Chairman" class="team-card__img" loading="lazy">
+              <div class="team-card__overlay">
+                <h3 class="team-card__name">Mr. Anura Perera</h3>
+                <p class="team-card__role">Founder &amp; Chairman</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate>
+            <div class="team-card__img-wrap">
+              <img src="images/team-member-2.jpg" alt="Managing Director" class="team-card__img" loading="lazy">
+              <div class="team-card__overlay">
+                <h3 class="team-card__name">Mrs. Nadeesha Fernando</h3>
+                <p class="team-card__role">Managing Director</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate>
+            <div class="team-card__img-wrap">
+              <img src="images/director-ops.jpg" alt="Director Operations" class="team-card__img" loading="lazy">
+              <div class="team-card__overlay">
+                <h3 class="team-card__name">Mr. Sanjay De Silva</h3>
+                <p class="team-card__role">Director of Operations</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate>
+            <div class="team-card__img-wrap">
+              <img src="images/head-counseling.jpg" alt="Head Counselling" class="team-card__img" loading="lazy">
+              <div class="team-card__overlay">
+                <h3 class="team-card__name">Ms. Thilini Wickramasinghe</h3>
+                <p class="team-card__role">Head of Counseling</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="section" id="mission" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-split__content" data-animate="slide-left">
+            <span class="section__label">Our Mission</span>
+            <h2 class="section__title" id="mission-title">Driven by Purpose, Guided by Values</h2>
+            <p class="section__desc">We believe every deserving student deserves access to quality education, regardless of background. Our mission is to democratize global education by providing transparent, affordable, and expert guidance.</p>
+            <p class="section__desc">Integrity, transparency, and student welfare are at the core of everything we do. We never compromise on ethical standards, and we measure our success by the success of our students.</p>
+            <a href="contact.html" class="btn btn--primary btn--magnetic">Talk to a Counselor <i class="ph ph-arrow-right"></i></a>
+          </div>
+
+          <div class="about-split__media" data-animate="slide-right">
+            <img src="images/mission-values.jpg" alt="Mission and values" class="about-split__img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner" aria-labelledby="cta-why-title">
+      <div class="container">
+        <div class="cta-banner__inner" data-animate="fade">
+          <h2 class="cta-banner__title" id="cta-why-title">Join 5000+ Successful Students</h2>
+          <p class="cta-banner__desc">Your dream university is within reach. Let our experts guide you every step of the way.</p>
+          <a href="contact.html" class="btn btn--secondary btn--lg btn--magnetic">Get Free Consultation <i class="ph ph-calendar-check"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">Sri Win <span>Education</span></div>
+          <p class="site-footer__desc">Your trusted partner in global education since 2009.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Quick Links</h4>
+          <a href="index.html" class="site-footer__link">Home</a>
+          <a href="why-us.html" class="site-footer__link">Why Us</a>
+          <a href="services.html" class="site-footer__link">Services</a>
+          <a href="scholarship-loans.html" class="site-footer__link">Scholarship &amp; Loans</a>
+          <a href="contact.html" class="site-footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Services</h4>
+          <a href="services.html#visa" class="site-footer__link">Visa Processing</a>
+          <a href="services.html#destinations" class="site-footer__link">Destinations</a>
+          <a href="services.html#business-tours" class="site-footer__link">Business Tours</a>
+          <a href="services.html#airline" class="site-footer__link">Airline &amp; Ticketing</a>
+          <a href="services.html#cargo" class="site-footer__link">Cargo Services</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Contact Us</h4>
+          <div class="site-footer__contact-item"><i class="ph ph-map-pin"></i><span>No. 123, Galle Road, Colombo 03, Sri Lanka</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-phone"></i><span>+94 11 234 5678</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-envelope"></i><span>info@sriwineducation.com</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-clock"></i><span>Mon – Sat: 9:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">&copy; 2024 Sri Win Education. All rights reserved.</p>
+        <div class="site-footer__socials">
+          <a href="#" class="site-footer__social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

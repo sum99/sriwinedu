@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Sri Win Education for free consultation. Find our address, phone, email, and send us a message directly.">
+  <title>Contact Us | Sri Win Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <canvas class="preloader__canvas"></canvas>
+    <div class="preloader__content">
+      <div class="preloader__logo">Sri Win <span>Education</span></div>
+      <p class="preloader__tagline">Your Gateway to Global Education</p>
+      <div class="preloader__progress">
+        <div class="preloader__progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header site-header--transparent" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo"><img src="images/logo.png" alt="Sri Win Education"></a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Home</a></li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">About Us</a>
+            <div class="main-nav__dropdown">
+              <a href="about.html" class="main-nav__dropdown-link">About SriWin</a>
+              <a href="team.html" class="main-nav__dropdown-link">Management Team</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Admission Open Now</a>
+            <div class="main-nav__dropdown">
+              <a href="admission-china.html" class="main-nav__dropdown-link">China</a>
+              <a href="admission-finland.html" class="main-nav__dropdown-link">Finland</a>
+              <a href="admission-hungary.html" class="main-nav__dropdown-link">Hungary</a>
+              <a href="admission-newzealand.html" class="main-nav__dropdown-link">New Zealand</a>
+              <a href="admission-singapore.html" class="main-nav__dropdown-link">Singapore</a>
+              <a href="admission-uk.html" class="main-nav__dropdown-link">UK</a>
+              <a href="admission-spain.html" class="main-nav__dropdown-link">Spain</a>
+              <a href="admission-romania.html" class="main-nav__dropdown-link">Romania</a>
+              <a href="admission-sweden.html" class="main-nav__dropdown-link">Sweden</a>
+              <a href="admission-ireland.html" class="main-nav__dropdown-link">Ireland</a>
+              <a href="admission-india.html" class="main-nav__dropdown-link">India</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="services.html" class="main-nav__link">Services</a>
+            <div class="main-nav__dropdown">
+              <a href="services.html#visa" class="main-nav__dropdown-link">Visa</a>
+              <a href="services.html#destinations" class="main-nav__dropdown-link">Destination</a>
+              <a href="services.html#business-tours" class="main-nav__dropdown-link">Business Tours</a>
+              <a href="services.html#airline" class="main-nav__dropdown-link">Air Line &amp; Ticketing</a>
+              <a href="services.html#hotel" class="main-nav__dropdown-link">Hotel &amp; Taxi Booking</a>
+              <a href="services.html#cargo" class="main-nav__dropdown-link">Cargo</a>
+              <a href="https://sriwinlankatravels.com/" class="main-nav__dropdown-link main-nav__dropdown-link--external" target="_blank" rel="noopener">In Bound Tours <i class="ph ph-arrow-square-out"></i></a>
+            </div>
+          </li>
+          <li class="main-nav__item"><a href="scholarship-loans.html" class="main-nav__link">Scholarship &amp; Loans</a></li>
+          <li class="main-nav__item"><a href="photo-gallery.html" class="main-nav__link">Photo Gallery</a></li>
+          <li class="main-nav__item"><a href="testimonials.html" class="main-nav__link">Testimonials</a></li>
+          <li class="main-nav__item"><a href="contact.html" class="main-nav__link main-nav__link--active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu"></button>
+    <div class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Home</a></div>
+    <div class="mobile-nav__item"><button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">About Us <i class="ph ph-caret-down"></i></button><div class="mobile-nav__sub"><a href="about.html" class="mobile-nav__sub-link">About SriWin</a><a href="team.html" class="mobile-nav__sub-link">Management Team</a></div></div>
+    <div class="mobile-nav__item"><button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">Admission Open Now <i class="ph ph-caret-down"></i></button><div class="mobile-nav__sub"><a href="admission-china.html" class="mobile-nav__sub-link">China</a><a href="admission-finland.html" class="mobile-nav__sub-link">Finland</a><a href="admission-hungary.html" class="mobile-nav__sub-link">Hungary</a><a href="admission-newzealand.html" class="mobile-nav__sub-link">New Zealand</a><a href="admission-singapore.html" class="mobile-nav__sub-link">Singapore</a><a href="admission-uk.html" class="mobile-nav__sub-link">UK</a><a href="admission-spain.html" class="mobile-nav__sub-link">Spain</a><a href="admission-romania.html" class="mobile-nav__sub-link">Romania</a><a href="admission-sweden.html" class="mobile-nav__sub-link">Sweden</a><a href="admission-ireland.html" class="mobile-nav__sub-link">Ireland</a><a href="admission-india.html" class="mobile-nav__sub-link">India</a></div></div>
+    <div class="mobile-nav__item"><a href="services.html" class="mobile-nav__link">Services</a></div>
+    <div class="mobile-nav__item"><a href="scholarship-loans.html" class="mobile-nav__link">Scholarship &amp; Loans</a></div>
+    <div class="mobile-nav__item"><a href="photo-gallery.html" class="mobile-nav__link">Photo Gallery</a></div>
+    <div class="mobile-nav__item"><a href="testimonials.html" class="mobile-nav__link">Testimonials</a></div>
+    <div class="mobile-nav__item"><a href="contact.html" class="mobile-nav__link">Contact</a></div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="country-hero" style="min-height: 50vh;">
+      <div class="country-hero__bg">
+        <img src="images/scholarship-hero.jpg" alt="Contact Sri Win Education" loading="eager">
+      </div>
+      <div class="country-hero__overlay"></div>
+      <div class="country-hero__content">
+        <span class="section__label" style="color: var(--color-secondary);">Get in Touch</span>
+        <h1 class="country-hero__title">Contact Us</h1>
+        <p class="country-hero__desc">Have questions about studying abroad? Our counselors are ready to help you take the next step.</p>
+      </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left: Contact Info -->
+          <div class="contact-info" data-animate="slide-left">
+            <span class="section__label">Reach Out</span>
+            <h2 class="section__title" id="contact-title" style="font-size: var(--text-2xl);">Let's Start a Conversation</h2>
+            <p class="section__desc" style="margin-bottom: var(--space-5);">Visit our office, call us, or fill out the form. We typically respond within 24 hours during business days.</p>
+
+            <div class="contact-info__block">
+              <h4 class="contact-info__title"><i class="ph ph-map-pin text-primary"></i> Office Address</h4>
+              <p class="contact-info__text">No. 123, Galle Road,<br>Colombo 03,<br>Sri Lanka.</p>
+            </div>
+
+            <div class="contact-info__block">
+              <h4 class="contact-info__title"><i class="ph ph-phone text-primary"></i> Phone</h4>
+              <p class="contact-info__text">
+                <a href="tel:+94112345678" class="contact-info__link">+94 11 234 5678</a><br>
+                <a href="tel:+94771234567" class="contact-info__link">+94 77 123 4567</a>
+              </p>
+            </div>
+
+            <div class="contact-info__block">
+              <h4 class="contact-info__title"><i class="ph ph-envelope text-primary"></i> Email</h4>
+              <p class="contact-info__text">
+                <a href="mailto:info@sriwineducation.com" class="contact-info__link">info@sriwineducation.com</a><br>
+                <a href="mailto:admissions@sriwineducation.com" class="contact-info__link">admissions@sriwineducation.com</a>
+              </p>
+            </div>
+
+            <div class="contact-info__block">
+              <h4 class="contact-info__title"><i class="ph ph-clock text-primary"></i> Business Hours</h4>
+              <p class="contact-info__text">Monday – Saturday: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-wrap" data-animate="slide-right">
+            <h3 class="section__title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Send a Message</h3>
+            <form class="contact-form" id="contact-form" action="#" method="post">
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-group__input" placeholder="Your Name" required>
+                <label for="name" class="form-group__label">Full Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-group__input" placeholder="Your Email" required>
+                <label for="email" class="form-group__label">Email Address</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" class="form-group__input" placeholder="Your Phone" required>
+                <label for="phone" class="form-group__label">Phone Number</label>
+              </div>
+              <div class="form-group">
+                <select id="service" name="service" class="form-group__select" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="visa">Visa Processing</option>
+                  <option value="admission">University Admission</option>
+                  <option value="scholarship">Scholarship / Loan</option>
+                  <option value="business-tour">Business Tour</option>
+                  <option value="travel">Airline / Hotel / Cargo</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+                <label for="service" class="form-group__label">Service Interest</label>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" class="form-group__textarea" placeholder="Your Message" required></textarea>
+                <label for="message" class="form-group__label">Your Message</label>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg btn--magnetic" style="width: 100%;">Send Message <i class="ph ph-paper-plane-right"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section section--light" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Questions</span>
+          <h2 class="section__title" id="faq-title">Frequently Asked Questions</h2>
+          <p class="section__desc mx-auto">Quick answers to the most common questions we receive from prospective students and families.</p>
+        </header>
+
+        <div class="faq-list">
+          <div class="faq-item" data-animate>
+            <button class="faq-item__question" aria-expanded="false">
+              <span>What documents are required for a student visa application?</span>
+              <span class="faq-item__icon"><i class="ph ph-caret-down"></i></span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Typically required documents include: a valid passport, university admission letter, proof of financial capability, academic transcripts, medical clearance, police clearance, and passport-sized photographs. Specific requirements vary by country — our counselors provide a tailored checklist for your destination.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-item__question" aria-expanded="false">
+              <span>How long does the visa processing take?</span>
+              <span class="faq-item__icon"><i class="ph ph-caret-down"></i></span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Processing times vary by country. On average: China (2–4 weeks), UK (3–6 weeks), Canada (4–8 weeks), Australia (4–12 weeks), and Schengen countries (2–4 weeks). We monitor your application status and follow up with embassies to expedite whenever possible.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Do you guarantee visa approval?</span>
+              <span class="faq-item__icon"><i class="ph ph-caret-down"></i></span>
+            </button>
+            <div class="faq-item__answer">
+              <p>While we cannot guarantee approval (as the final decision rests with the embassy), our documented visa success rate is 98%. We achieve this through meticulous documentation, interview coaching, and pre-screening applicants to ensure they meet all eligibility criteria.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Can I get a scholarship through Sri Win Education?</span>
+              <span class="faq-item__icon"><i class="ph ph-caret-down"></i></span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Yes. We have partnerships with universities that offer merit-based and need-based scholarships. We also work with HNB, Commercial Bank, Seylan, and Sarvodaya Bank to facilitate education loans. Our counselors will assess your profile and recommend the best financial pathway.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-item__question" aria-expanded="false">
+              <span>What support do you provide after I arrive at my destination?</span>
+              <span class="faq-item__icon"><i class="ph ph-caret-down"></i></span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Our support doesn't end when you board the flight. We provide airport pickup coordination, temporary accommodation arrangements, local SIM guidance, university registration assistance, and a 24/7 helpline for your first month abroad.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Is there a consultation fee?</span>
+              <span class="faq-item__icon"><i class="ph ph-caret-down"></i></span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Your first consultation is completely free. We believe every student deserves access to expert guidance without upfront barriers. Subsequent counseling sessions for complex cases may carry a nominal fee, which is always disclosed transparently.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section section--sm" aria-label="Office Location Map">
+      <div class="container">
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.81536308498!2d79.8150056!3d6.9270796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593b0b0d2c9f%3A0x6b8f6b7b7b7b7b7b!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Sri Win Education Office Location"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">Sri Win <span>Education</span></div>
+          <p class="site-footer__desc">Your trusted partner in global education since 2009.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Quick Links</h4>
+          <a href="index.html" class="site-footer__link">Home</a>
+          <a href="why-us.html" class="site-footer__link">Why Us</a>
+          <a href="services.html" class="site-footer__link">Services</a>
+          <a href="scholarship-loans.html" class="site-footer__link">Scholarship &amp; Loans</a>
+          <a href="contact.html" class="site-footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Services</h4>
+          <a href="services.html#visa" class="site-footer__link">Visa Processing</a>
+          <a href="services.html#destinations" class="site-footer__link">Destinations</a>
+          <a href="services.html#business-tours" class="site-footer__link">Business Tours</a>
+          <a href="services.html#airline" class="site-footer__link">Airline &amp; Ticketing</a>
+          <a href="services.html#cargo" class="site-footer__link">Cargo Services</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Contact Us</h4>
+          <div class="site-footer__contact-item"><i class="ph ph-map-pin"></i><span>No. 123, Galle Road, Colombo 03, Sri Lanka</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-phone"></i><span>+94 11 234 5678</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-envelope"></i><span>info@sriwineducation.com</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-clock"></i><span>Mon – Sat: 9:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">&copy; 2024 Sri Win Education. All rights reserved.</p>
+        <div class="site-footer__socials">
+          <a href="#" class="site-footer__social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

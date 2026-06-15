@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive education services including visa processing, destinations, business tours, airline ticketing, hotel booking, and cargo.">
+  <title>Services | Sri Win Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <canvas class="preloader__canvas"></canvas>
+    <div class="preloader__content">
+      <div class="preloader__logo">Sri Win <span>Education</span></div>
+      <p class="preloader__tagline">Your Gateway to Global Education</p>
+      <div class="preloader__progress">
+        <div class="preloader__progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header site-header--transparent" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo"><img src="images/logo.png" alt="Sri Win Education"></a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Home</a></li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">About Us</a>
+            <div class="main-nav__dropdown">
+              <a href="about.html" class="main-nav__dropdown-link">About SriWin</a>
+              <a href="team.html" class="main-nav__dropdown-link">Management Team</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Admission Open Now</a>
+            <div class="main-nav__dropdown">
+              <a href="admission-china.html" class="main-nav__dropdown-link">China</a>
+              <a href="admission-finland.html" class="main-nav__dropdown-link">Finland</a>
+              <a href="admission-hungary.html" class="main-nav__dropdown-link">Hungary</a>
+              <a href="admission-newzealand.html" class="main-nav__dropdown-link">New Zealand</a>
+              <a href="admission-singapore.html" class="main-nav__dropdown-link">Singapore</a>
+              <a href="admission-uk.html" class="main-nav__dropdown-link">UK</a>
+              <a href="admission-spain.html" class="main-nav__dropdown-link">Spain</a>
+              <a href="admission-romania.html" class="main-nav__dropdown-link">Romania</a>
+              <a href="admission-sweden.html" class="main-nav__dropdown-link">Sweden</a>
+              <a href="admission-ireland.html" class="main-nav__dropdown-link">Ireland</a>
+              <a href="admission-india.html" class="main-nav__dropdown-link">India</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="services.html" class="main-nav__link main-nav__link--active">Services</a>
+            <div class="main-nav__dropdown">
+              <a href="services.html#visa" class="main-nav__dropdown-link">Visa</a>
+              <a href="services.html#destinations" class="main-nav__dropdown-link">Destination</a>
+              <a href="services.html#business-tours" class="main-nav__dropdown-link">Business Tours</a>
+              <a href="services.html#airline" class="main-nav__dropdown-link">Air Line &amp; Ticketing</a>
+              <a href="services.html#hotel" class="main-nav__dropdown-link">Hotel &amp; Taxi Booking</a>
+              <a href="services.html#cargo" class="main-nav__dropdown-link">Cargo</a>
+              <a href="https://sriwinlankatravels.com/" class="main-nav__dropdown-link main-nav__dropdown-link--external" target="_blank" rel="noopener">In Bound Tours <i class="ph ph-arrow-square-out"></i></a>
+            </div>
+          </li>
+          <li class="main-nav__item"><a href="scholarship-loans.html" class="main-nav__link">Scholarship &amp; Loans</a></li>
+          <li class="main-nav__item"><a href="photo-gallery.html" class="main-nav__link">Photo Gallery</a></li>
+          <li class="main-nav__item"><a href="testimonials.html" class="main-nav__link">Testimonials</a></li>
+          <li class="main-nav__item"><a href="contact.html" class="main-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu"></button>
+    <div class="mobile-nav__item">
+      <a href="index.html" class="mobile-nav__link">Home</a>
+    </div>
+    <div class="mobile-nav__item">
+      <button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">
+        About Us <i class="ph ph-caret-down"></i>
+      </button>
+      <div class="mobile-nav__sub">
+        <a href="about.html" class="mobile-nav__sub-link">About SriWin</a>
+        <a href="team.html" class="mobile-nav__sub-link">Management Team</a>
+      </div>
+    </div>
+    <div class="mobile-nav__item">
+      <button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">
+        Admission Open Now <i class="ph ph-caret-down"></i>
+      </button>
+      <div class="mobile-nav__sub">
+        <a href="admission-china.html" class="mobile-nav__sub-link">China</a>
+        <a href="admission-finland.html" class="mobile-nav__sub-link">Finland</a>
+        <a href="admission-hungary.html" class="mobile-nav__sub-link">Hungary</a>
+        <a href="admission-newzealand.html" class="mobile-nav__sub-link">New Zealand</a>
+        <a href="admission-singapore.html" class="mobile-nav__sub-link">Singapore</a>
+        <a href="admission-uk.html" class="mobile-nav__sub-link">UK</a>
+        <a href="admission-spain.html" class="mobile-nav__sub-link">Spain</a>
+        <a href="admission-romania.html" class="mobile-nav__sub-link">Romania</a>
+        <a href="admission-sweden.html" class="mobile-nav__sub-link">Sweden</a>
+        <a href="admission-ireland.html" class="mobile-nav__sub-link">Ireland</a>
+        <a href="admission-india.html" class="mobile-nav__sub-link">India</a>
+      </div>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="services.html" class="mobile-nav__link">Services</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="scholarship-loans.html" class="mobile-nav__link">Scholarship &amp; Loans</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="photo-gallery.html" class="mobile-nav__link">Photo Gallery</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="testimonials.html" class="mobile-nav__link">Testimonials</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="contact.html" class="mobile-nav__link">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="country-hero" style="min-height: 50vh;">
+      <div class="country-hero__bg">
+        <img src="images/china-destination.jpg" alt="Services" loading="eager">
+      </div>
+      <div class="country-hero__overlay"></div>
+      <div class="country-hero__content">
+        <span class="section__label" style="color: var(--color-secondary);">Our Services</span>
+        <h1 class="country-hero__title">Everything You Need to Go Global</h1>
+        <p class="country-hero__desc">Comprehensive end-to-end solutions for students, travelers, and businesses.</p>
+      </div>
+    </section>
+
+    <!-- Visa Section -->
+    <section class="section" id="visa" aria-labelledby="visa-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Visa Services</span>
+          <h2 class="section__title" id="visa-title">Visa Processing Countries</h2>
+          <p class="section__desc mx-auto">We handle student visas for the following countries with a documented 98% success rate.</p>
+        </header>
+
+        <div class="visa-grid">
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇨🇳</span><h3 class="visa-card__name">China</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇳🇿</span><h3 class="visa-card__name">New Zealand</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇦🇺</span><h3 class="visa-card__name">Australia</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇨🇦</span><h3 class="visa-card__name">Canada</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇺🇸</span><h3 class="visa-card__name">USA</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇫🇮</span><h3 class="visa-card__name">Finland</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇸🇪</span><h3 class="visa-card__name">Sweden</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇩🇪</span><h3 class="visa-card__name">Germany</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇫🇷</span><h3 class="visa-card__name">France</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇨🇾</span><h3 class="visa-card__name">Cyprus</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇬🇪</span><h3 class="visa-card__name">Georgia</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇮🇪</span><h3 class="visa-card__name">Ireland</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇮🇹</span><h3 class="visa-card__name">Italy</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇱🇻</span><h3 class="visa-card__name">Latvia</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇲🇾</span><h3 class="visa-card__name">Malaysia</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇷🇴</span><h3 class="visa-card__name">Romania</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇸🇬</span><h3 class="visa-card__name">Singapore</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇸🇰</span><h3 class="visa-card__name">Slovakia</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇸🇮</span><h3 class="visa-card__name">Slovenia</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇪🇸</span><h3 class="visa-card__name">Spain</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇺🇦</span><h3 class="visa-card__name">Ukraine</h3></article>
+          <article class="visa-card" data-animate><span class="visa-card__flag">🇬🇧</span><h3 class="visa-card__name">United Kingdom</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="section section--light" id="destinations" aria-labelledby="destinations-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Study Abroad</span>
+          <h2 class="section__title" id="destinations-title">Explore Top Destinations</h2>
+          <p class="section__desc mx-auto">Discover world-renowned universities and vibrant cultures in our most popular study destinations.</p>
+        </header>
+
+        <div class="destinations-grid">
+          <article class="destination-card" data-animate>
+            <img src="images/china-destination.jpg" alt="China" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇨🇳</span>
+              <h3 class="destination-card__name">China</h3>
+              <p class="destination-card__meta">MBBS &amp; Engineering Hub</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/uk-destination.jpg" alt="United Kingdom" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇬🇧</span>
+              <h3 class="destination-card__name">United Kingdom</h3>
+              <p class="destination-card__meta">World-Class Degrees</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/finland-campus.jpg" alt="Finland" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇫🇮</span>
+              <h3 class="destination-card__name">Finland</h3>
+              <p class="destination-card__meta">Tuition-Free Education</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/hungary-university.jpg" alt="Hungary" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇭🇺</span>
+              <h3 class="destination-card__name">Hungary</h3>
+              <p class="destination-card__meta">Affordable European Study</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/newzealand-university.jpg" alt="New Zealand" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇳🇿</span>
+              <h3 class="destination-card__name">New Zealand</h3>
+              <p class="destination-card__meta">Quality of Life</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/singapore-destination.jpg" alt="Singapore" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇸🇬</span>
+              <h3 class="destination-card__name">Singapore</h3>
+              <p class="destination-card__meta">Asia's Education Leader</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/romania-university.jpg" alt="Romania" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇷🇴</span>
+              <h3 class="destination-card__name">Romania</h3>
+              <p class="destination-card__meta">EU-Quality Education</p>
+            </div>
+          </article>
+
+          <article class="destination-card" data-animate>
+            <img src="images/spain-destination.jpg" alt="Spain" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇪🇸</span>
+              <h3 class="destination-card__name">Spain</h3>
+              <p class="destination-card__meta">Vibrant Culture &amp; Learning</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Tours -->
+    <section class="section" id="business-tours" aria-labelledby="business-tours-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Corporate Travel</span>
+          <h2 class="section__title" id="business-tours-title">Business Tours</h2>
+          <p class="section__desc mx-auto">Curated business tour packages designed for professionals and entrepreneurs.</p>
+        </header>
+
+        <div class="tour-list">
+          <article class="tour-card" data-animate>
+            <img src="images/china-tour.jpg" alt="China Business Tour" class="tour-card__img" loading="lazy">
+            <div class="tour-card__overlay"><h3 class="tour-card__title">China Business Tour</h3></div>
+          </article>
+          <article class="tour-card" data-animate>
+            <img src="images/yiwu-tour.jpg" alt="Yiwu Business Tours" class="tour-card__img" loading="lazy">
+            <div class="tour-card__overlay"><h3 class="tour-card__title">Yiwu Business Tours</h3></div>
+          </article>
+          <article class="tour-card" data-animate>
+            <img src="images/cantonfair-tour.jpg" alt="Canton Fair Tours" class="tour-card__img" loading="lazy">
+            <div class="tour-card__overlay"><h3 class="tour-card__title">Canton Fair Tours</h3></div>
+          </article>
+          <article class="tour-card" data-animate>
+            <img src="images/japan-tour.jpg" alt="Japan Business Tours" class="tour-card__img" loading="lazy">
+            <div class="tour-card__overlay"><h3 class="tour-card__title">Japan Business Tours</h3></div>
+          </article>
+          <article class="tour-card" data-animate>
+            <img src="images/india-tour.jpg" alt="Indian Thirupathi Tour" class="tour-card__img" loading="lazy">
+            <div class="tour-card__overlay"><h3 class="tour-card__title">Indian Thirupathi Tour</h3></div>
+          </article>
+          <article class="tour-card" data-animate>
+            <img src="images/germany-destination.jpg" alt="Europe Tour" class="tour-card__img" loading="lazy">
+            <div class="tour-card__overlay"><h3 class="tour-card__title">Europe Tour</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Airline & Ticketing -->
+    <section class="section" id="airline" aria-labelledby="airline-title">
+      <div class="container">
+        <div class="service-feature-row" data-animate="slide-left">
+          <div class="service-feature-row__content">
+            <div class="service-feature-row__label">
+              <i class="ph ph-airplane-tilt"></i> Travel Logistics
+            </div>
+            <h2 class="service-feature-row__title" id="airline-title">Air Line &amp; Ticketing</h2>
+            <p class="service-feature-row__desc">We partner with major international airlines to secure the best fares for students traveling abroad. Whether you're flying solo for the first time or joining your family, we handle everything from booking to seat selection.</p>
+            <ul class="service-feature-list">
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Exclusive student airfare rates with leading carriers worldwide
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Flexible rebooking and date change options at no extra cost
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Multi-city and open-jaw ticket planning for complex itineraries
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Excess baggage arrangements for students carrying heavy academic materials
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Priority visa letter issuance to support embassy submissions
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--magnetic">Get a Quote <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="service-feature-row__media">
+            <div class="media-icon-bg">
+              <i class="ph ph-airplane-tilt"></i>
+            </div>
+            <div class="media-badge">
+              <i class="ph ph-seal-check"></i> Trusted Partner
+            </div>
+          </div>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step" data-animate>
+            <div class="process-step__number">01</div>
+            <h3 class="process-step__title">Inquiry &amp; Route Plan</h3>
+            <p class="process-step__desc">Share your travel dates and destination. We plan the best route and fare options.</p>
+          </div>
+          <div class="process-step" data-animate>
+            <div class="process-step__number">02</div>
+            <h3 class="process-step__title">Booking Confirmation</h3>
+            <p class="process-step__desc">We reserve your seat and send e-ticket within hours of confirmation.</p>
+          </div>
+          <div class="process-step" data-animate>
+            <div class="process-step__number">03</div>
+            <h3 class="process-step__title">Visa Support Letter</h3>
+            <p class="process-step__desc">Receive flight itinerary and visa support documents for embassy applications.</p>
+          </div>
+          <div class="process-step" data-animate>
+            <div class="process-step__number">04</div>
+            <h3 class="process-step__title">Pre-Departure Prep</h3>
+            <p class="process-step__desc">Baggage guidelines, check-in support, and last-minute seat upgrades handled.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hotel & Taxi Booking -->
+    <section class="section section--light" id="hotel" aria-labelledby="hotel-title">
+      <div class="container">
+        <div class="service-feature-row" data-animate="slide-right">
+          <div class="service-feature-row__content">
+            <div class="service-feature-row__label">
+              <i class="ph ph-buildings"></i> Travel Logistics
+            </div>
+            <h2 class="service-feature-row__title" id="hotel-title">Hotel &amp; Taxi Booking</h2>
+            <p class="service-feature-row__desc">Arriving in a new country can be overwhelming. We ensure a warm, safe, and Hassle-free welcome by arranging quality accommodation and reliable transportation before you land.</p>
+            <ul class="service-feature-list">
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Pre-vetted student hostels and rental apartments near top universities
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Airport pickup and drop-off with licensed, English-speaking drivers
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Temporary hotel stays for students awaiting permanent accommodation
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Local SIM card and bank account setup guidance upon arrival
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                24/7 emergency contact line for travel-related emergencies
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--magnetic">Book Now <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="service-feature-row__media">
+            <div class="media-icon-bg">
+              <i class="ph ph-buildings"></i>
+            </div>
+            <div class="media-badge">
+              <i class="ph ph-star"></i> 5-Star Service
+            </div>
+          </div>
+        </div>
+
+        <div class="service-cta-row">
+          <div class="service-cta-item" data-animate>
+            <div class="service-cta-item__icon"><i class="ph ph-house-line"></i></div>
+            <div class="service-cta-item__text">Student Housing &amp; Private Rentals</div>
+          </div>
+          <div class="service-cta-item" data-animate>
+            <div class="service-cta-item__icon"><i class="ph ph-car"></i></div>
+            <div class="service-cta-item__text">Airport Pickup &amp; Drop-off</div>
+          </div>
+          <div class="service-cta-item" data-animate>
+            <div class="service-cta-item__icon"><i class="ph ph-map-pin"></i></div>
+            <div class="service-cta-item__text">City Orientation Tours</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cargo Services -->
+    <section class="section" id="cargo" aria-labelledby="cargo-title">
+      <div class="container">
+        <div class="service-feature-row" data-animate="slide-left">
+          <div class="service-feature-row__content">
+            <div class="service-feature-row__label">
+              <i class="ph ph-shipping-container"></i> Travel Logistics
+            </div>
+            <h2 class="service-feature-row__title" id="cargo-title">Cargo Services</h2>
+            <p class="service-feature-row__desc">Send your belongings anywhere in the world with our reliable air and sea cargo services. From personal effects and documents to excess baggage and parcels — we deliver safely, quickly, and at competitive rates.</p>
+            <ul class="service-feature-list">
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Air cargo for urgent shipments — documents, electronics, medicines
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Sea freight for larger consignments — household goods, books, clothing
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Excess baggage handling when airline limits fall short
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Customs clearance support and documentation for smooth delivery
+              </li>
+              <li class="service-feature-list__item">
+                <span class="service-feature-list__icon"><i class="ph ph-check"></i></span>
+                Door-to-door delivery tracking with real-time status updates
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--magnetic">Request a Rate <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="service-feature-row__media">
+            <div class="media-icon-bg">
+              <i class="ph ph-shipping-container"></i>
+            </div>
+            <div class="media-badge">
+              <i class="ph ph-globe"></i> Global Coverage
+            </div>
+          </div>
+        </div>
+
+        <div class="service-cta-row">
+          <div class="service-cta-item" data-animate>
+            <div class="service-cta-item__icon"><i class="ph ph-airplane-takeoff"></i></div>
+            <div class="service-cta-item__text">Air Cargo — Express Delivery</div>
+          </div>
+          <div class="service-cta-item" data-animate>
+            <div class="service-cta-item__icon"><i class="ph ph-anchor"></i></div>
+            <div class="service-cta-item__text">Sea Freight — Cost Effective</div>
+          </div>
+          <div class="service-cta-item" data-animate>
+            <div class="service-cta-item__icon"><i class="ph ph-package"></i></div>
+            <div class="service-cta-item__text">Excess Baggage Handling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner" aria-labelledby="cta-services-title">
+      <div class="container">
+        <div class="cta-banner__inner" data-animate="fade">
+          <h2 class="cta-banner__title" id="cta-services-title">Need a Custom Service Package?</h2>
+          <p class="cta-banner__desc">Contact us to tailor a service bundle that fits your exact study abroad or travel requirements.</p>
+          <a href="contact.html" class="btn btn--secondary btn--lg btn--magnetic">Get in Touch <i class="ph ph-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">Sri Win <span>Education</span></div>
+          <p class="site-footer__desc">Your trusted partner in global education since 2009.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Quick Links</h4>
+          <a href="index.html" class="site-footer__link">Home</a>
+          <a href="why-us.html" class="site-footer__link">Why Us</a>
+          <a href="services.html" class="site-footer__link">Services</a>
+          <a href="scholarship-loans.html" class="site-footer__link">Scholarship &amp; Loans</a>
+          <a href="contact.html" class="site-footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Services</h4>
+          <a href="services.html#visa" class="site-footer__link">Visa Processing</a>
+          <a href="services.html#destinations" class="site-footer__link">Destinations</a>
+          <a href="services.html#business-tours" class="site-footer__link">Business Tours</a>
+          <a href="services.html#airline" class="site-footer__link">Airline &amp; Ticketing</a>
+          <a href="services.html#cargo" class="site-footer__link">Cargo Services</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Contact Us</h4>
+          <div class="site-footer__contact-item"><i class="ph ph-map-pin"></i><span>No. 123, Galle Road, Colombo 03, Sri Lanka</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-phone"></i><span>+94 11 234 5678</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-envelope"></i><span>info@sriwineducation.com</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-clock"></i><span>Mon – Sat: 9:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">&copy; 2024 Sri Win Education. All rights reserved.</p>
+        <div class="site-footer__socials">
+          <a href="#" class="site-footer__social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

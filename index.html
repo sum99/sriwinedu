@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sri Win Education - Premium Education Consulting & Visa Agency. 5000+ students placed across 22+ countries.">
+  <title>Sri Win Education | Premium Education Consulting & Visa Agency</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <!-- WP Template Part: preloader.php -->
+  <div class="preloader" id="preloader">
+    <canvas class="preloader__canvas"></canvas>
+    <div class="preloader__content">
+      <div class="preloader__logo">Sri Win <span>Education</span></div>
+      <p class="preloader__tagline">Your Gateway to Global Education</p>
+      <div class="preloader__progress">
+        <div class="preloader__progress-bar"></div>
+      </div>
+    </div>
+  </div>
+  <!-- /WP Template Part: preloader.php -->
+
+
+  <!-- ==================== HEADER ==================== -->
+  <!-- WP Template Part: header.php -->
+  <header class="site-header site-header--transparent" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Sri Win Education Home">
+        <img src="images/logo.png" alt="Sri Win Education">
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html" class="main-nav__link main-nav__link--active">Home</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">About Us</a>
+            <div class="main-nav__dropdown">
+              <a href="about.html" class="main-nav__dropdown-link">About SriWin</a>
+              <a href="team.html" class="main-nav__dropdown-link">Management Team</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Admission Open Now</a>
+            <div class="main-nav__dropdown">
+              <a href="admission-china.html" class="main-nav__dropdown-link">China</a>
+              <a href="admission-finland.html" class="main-nav__dropdown-link">Finland</a>
+              <a href="admission-hungary.html" class="main-nav__dropdown-link">Hungary</a>
+              <a href="admission-newzealand.html" class="main-nav__dropdown-link">New Zealand</a>
+              <a href="admission-singapore.html" class="main-nav__dropdown-link">Singapore</a>
+              <a href="admission-uk.html" class="main-nav__dropdown-link">UK</a>
+              <a href="admission-spain.html" class="main-nav__dropdown-link">Spain</a>
+              <a href="admission-romania.html" class="main-nav__dropdown-link">Romania</a>
+              <a href="admission-sweden.html" class="main-nav__dropdown-link">Sweden</a>
+              <a href="admission-ireland.html" class="main-nav__dropdown-link">Ireland</a>
+              <a href="admission-india.html" class="main-nav__dropdown-link">India</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="services.html" class="main-nav__link">Services</a>
+            <div class="main-nav__dropdown">
+              <a href="services.html#visa" class="main-nav__dropdown-link">Visa</a>
+              <a href="services.html#destinations" class="main-nav__dropdown-link">Destination</a>
+              <a href="services.html#business-tours" class="main-nav__dropdown-link">Business Tours</a>
+              <a href="services.html#airline" class="main-nav__dropdown-link">Air Line &amp; Ticketing</a>
+              <a href="services.html#hotel" class="main-nav__dropdown-link">Hotel &amp; Taxi Booking</a>
+              <a href="services.html#cargo" class="main-nav__dropdown-link">Cargo</a>
+              <a href="https://sriwinlankatravels.com/" class="main-nav__dropdown-link main-nav__dropdown-link--external" target="_blank" rel="noopener">
+                In Bound Tours <i class="ph ph-arrow-square-out"></i>
+              </a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="scholarship-loans.html" class="main-nav__link">Scholarship &amp; Loans</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo-gallery.html" class="main-nav__link">Photo Gallery</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="testimonials.html" class="main-nav__link">Testimonials</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="contact.html" class="main-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+<!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu"></button>
+    <div class="mobile-nav__item">
+      <a href="index.html" class="mobile-nav__link">Home</a>
+    </div>
+    <div class="mobile-nav__item">
+      <button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">
+        About Us
+        <i class="ph ph-caret-down"></i>
+      </button>
+      <div class="mobile-nav__sub">
+        <a href="about.html" class="mobile-nav__sub-link">About SriWin</a>
+        <a href="team.html" class="mobile-nav__sub-link">Management Team</a>
+      </div>
+    </div>
+    <div class="mobile-nav__item">
+      <button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">
+        Admission Open Now
+        <i class="ph ph-caret-down"></i>
+      </button>
+      <div class="mobile-nav__sub">
+        <a href="admission-china.html" class="mobile-nav__sub-link">China</a>
+        <a href="admission-finland.html" class="mobile-nav__sub-link">Finland</a>
+        <a href="admission-hungary.html" class="mobile-nav__sub-link">Hungary</a>
+        <a href="admission-newzealand.html" class="mobile-nav__sub-link">New Zealand</a>
+        <a href="admission-singapore.html" class="mobile-nav__sub-link">Singapore</a>
+        <a href="admission-uk.html" class="mobile-nav__sub-link">UK</a>
+        <a href="admission-spain.html" class="mobile-nav__sub-link">Spain</a>
+        <a href="admission-romania.html" class="mobile-nav__sub-link">Romania</a>
+        <a href="admission-sweden.html" class="mobile-nav__sub-link">Sweden</a>
+        <a href="admission-ireland.html" class="mobile-nav__sub-link">Ireland</a>
+        <a href="admission-india.html" class="mobile-nav__sub-link">India</a>
+      </div>
+    </div>
+    <div class="mobile-nav__item">
+      <button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">
+        Services
+        <i class="ph ph-caret-down"></i>
+      </button>
+      <div class="mobile-nav__sub">
+        <a href="services.html" class="mobile-nav__sub-link">All Services</a>
+        <a href="services.html#visa" class="mobile-nav__sub-link">Visa</a>
+        <a href="services.html#destinations" class="mobile-nav__sub-link">Destinations</a>
+        <a href="services.html#business-tours" class="mobile-nav__sub-link">Business Tours</a>
+        <a href="services.html#airline" class="mobile-nav__sub-link">Airline &amp; Ticketing</a>
+        <a href="services.html#hotel" class="mobile-nav__sub-link">Hotel &amp; Taxi Booking</a>
+        <a href="services.html#cargo" class="mobile-nav__sub-link">Cargo</a>
+      </div>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="scholarship-loans.html" class="mobile-nav__link">Scholarship &amp; Loans</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="photo-gallery.html" class="mobile-nav__link">Photo Gallery</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="testimonials.html" class="mobile-nav__link">Testimonials</a>
+    </div>
+    <div class="mobile-nav__item">
+      <a href="contact.html" class="mobile-nav__link">Contact</a>
+    </div>
+  </div>
+  <!-- /WP Template Part: header.php -->
+
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <!-- WP Block: hero -->
+    <section class="hero" id="hero" aria-label="Hero Section">
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slider__track" id="hero-slider-track">
+
+          <div class="hero-slider__slide" data-hero-label="Since 2009 — Trusted by 5000+ Students" data-hero-title-line1="Your Future," data-hero-title-line2="Built on <span class='text-secondary'>Global</span>" data-hero-title-line3="Education." data-hero-desc="Sri Win Education connects ambitious students with world-class universities across 22+ countries. From visa processing to full scholarship guidance — we handle every step." data-hero-btn1-text="Start Your Journey" data-hero-btn1-link="contact.html" data-hero-btn2-text="Explore Services" data-hero-btn2-link="services.html">
+            <img src="images/slide1.jpeg" alt="Slide 1" loading="eager">
+          </div>
+
+          <div class="hero-slider__slide" data-hero-label="22+ Countries, One Destination" data-hero-title-line1="Unlock Your" data-hero-title-line2="Dream <span class='text-secondary'>University</span>" data-hero-title-line3="Today." data-hero-desc="From China to Canada, UK to Australia — we partner with top-ranked institutions worldwide to find the perfect match for your academic aspirations." data-hero-btn1-text="Find Your University" data-hero-btn1-link="services.html" data-hero-btn2-text="View Destinations" data-hero-btn2-link="services.html#destinations">
+            <img src="images/slide2.jpeg" alt="Slide 2" loading="lazy">
+          </div>
+
+          <div class="hero-slider__slide" data-hero-label="98% Visa Success Rate" data-hero-title-line1="Your Path to" data-hero-title-line2="Study <span class='text-secondary'>Abroad</span>" data-hero-title-line3="Starts Here." data-hero-desc="Don't let complicated visa processes hold you back. Our expert team ensures a smooth, stress-free journey from application to arrival." data-hero-btn1-text="Get Visa Help" data-hero-btn1-link="services.html#visa" data-hero-btn2-text="Read Success Stories" data-hero-btn2-link="testimonials.html">
+            <img src="images/slide3.jpeg" alt="Slide 3" loading="lazy">
+          </div>
+
+          <div class="hero-slider__slide" data-hero-label="15+ Years of Excellence" data-hero-title-line1="Start Your" data-hero-title-line2="Global <span class='text-secondary'>Journey</span>" data-hero-title-line3="Today." data-hero-desc="Sri Win Education has helped thousands of students achieve their dreams. Join the next batch of successful students who trusted us with their future." data-hero-btn1-text="Book Consultation" data-hero-btn1-link="contact.html" data-hero-btn2-text="View Testimonials" data-hero-btn2-link="testimonials.html">
+            <img src="images/slide4.jpeg" alt="Slide 4" loading="lazy">
+          </div>
+
+        </div>
+
+        <div class="hero-slider__content" id="hero-slider-content">
+          <p class="hero__label"></p>
+          <h1 class="hero__title">
+            <span class="line"><span class="line-inner"></span></span>
+            <span class="line"><span class="line-inner"></span></span>
+            <span class="line"><span class="line-inner"></span></span>
+          </h1>
+          <p class="hero__desc"></p>
+          <div class="hero__actions"></div>
+        </div>
+
+        <div class="hero-slider__arrows">
+          <button class="hero-slider__arrow hero-slider__arrow--prev" aria-label="Previous slide"><i class="ph ph-caret-left"></i></button>
+          <button class="hero-slider__arrow hero-slider__arrow--next" aria-label="Next slide"><i class="ph ph-caret-right"></i></button>
+        </div>
+
+        <div class="hero-slider__dots" id="hero-slider-dots"></div>
+      </div>
+
+</section>
+    <!-- /WP Block: hero -->
+
+
+    <!-- MARQUEE -->
+    <!-- WP Block: marquee -->
+    <section class="marquee" aria-label="Partner Countries Marquee">
+      <div class="marquee__track">
+        <div class="marquee__content">
+          <span class="marquee__item"><span class="marquee__dot"></span> China</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Finland</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Hungary</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> New Zealand</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Singapore</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> United Kingdom</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Spain</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Romania</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Sweden</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Ireland</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> India</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Australia</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Canada</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> USA</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> Germany</span>
+          <span class="marquee__item"><span class="marquee__dot"></span> France</span>
+        </div>
+      </div>
+    </section>
+    <!-- /WP Block: marquee -->
+
+
+    <!-- SERVICES OVERVIEW -->
+    <!-- WP Block: services-overview -->
+    <section class="section section--light" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">What We Offer</span>
+          <h2 class="section__title" id="services-title">Comprehensive Education Services</h2>
+          <p class="section__desc mx-auto">From the moment you dream of studying abroad to the day you land — our end-to-end services ensure a seamless journey.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card" data-animate>
+            <div class="service-card__icon"><i class="ph ph-stamp"></i></div>
+            <h3 class="service-card__title">Visa Processing</h3>
+            <p class="service-card__desc">Expert guidance for student visas across 22+ countries with a 98% success rate and zero-hassle documentation.</p>
+            <a href="services.html#visa" class="service-card__link">Learn More <i class="ph ph-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon"><i class="ph ph-globe-hemisphere-west"></i></div>
+            <h3 class="service-card__title">Destination Guidance</h3>
+            <p class="service-card__desc">Personalized country and university selection based on your academic profile, budget, and career goals.</p>
+            <a href="services.html#destinations" class="service-card__link">Learn More <i class="ph ph-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon"><i class="ph ph-airplane-tilt"></i></div>
+            <h3 class="service-card__title">Airline &amp; Ticketing</h3>
+            <p class="service-card__desc">Competitive airfare bookings, flexible dates, and student-discounted rates for your international travel.</p>
+            <a href="services.html#airline" class="service-card__link">Learn More <i class="ph ph-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon"><i class="ph ph-buildings"></i></div>
+            <h3 class="service-card__title">Hotel &amp; Taxi Booking</h3>
+            <p class="service-card__desc">Pre-arranged accommodation and airport transfers so you feel at home from the moment you arrive.</p>
+            <a href="services.html#hotel" class="service-card__link">Learn More <i class="ph ph-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon"><i class="ph ph-briefcase"></i></div>
+            <h3 class="service-card__title">Business Tours</h3>
+            <p class="service-card__desc">Exclusive business tour packages to China, Japan, Europe, and India including trade fair visits.</p>
+            <a href="services.html#business-tours" class="service-card__link">Learn More <i class="ph ph-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon"><i class="ph ph-shipping-container"></i></div>
+            <h3 class="service-card__title">Cargo Services</h3>
+            <p class="service-card__desc">Reliable air and sea cargo solutions for students relocating abroad with excess baggage.</p>
+            <a href="services.html#cargo" class="service-card__link">Learn More <i class="ph ph-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- /WP Block: services-overview -->
+
+
+    <!-- STATS COUNTERS -->
+    <!-- WP Block: stats-section -->
+    <section class="section section--dark stats-section" id="stats" aria-labelledby="stats-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate="fade">
+          <span class="section__label">Our Impact</span>
+          <h2 class="section__title" id="stats-title">Numbers That Speak</h2>
+        </header>
+
+        <div class="stats-grid">
+          <article class="stat-item" data-animate="fade">
+            <div class="stat-item__divider"></div>
+            <div class="stat-item__number">5000<span>+</span></div>
+            <p class="stat-item__label">Students Placed</p>
+          </article>
+
+          <article class="stat-item" data-animate="fade">
+            <div class="stat-item__divider"></div>
+            <div class="stat-item__number">98<span>%</span></div>
+            <p class="stat-item__label">Visa Success Rate</p>
+          </article>
+
+          <article class="stat-item" data-animate="fade">
+            <div class="stat-item__divider"></div>
+            <div class="stat-item__number">22<span>+</span></div>
+            <p class="stat-item__label">Partner Countries</p>
+          </article>
+
+          <article class="stat-item" data-animate="fade">
+            <div class="stat-item__divider"></div>
+            <div class="stat-item__number">15<span>+</span></div>
+            <p class="stat-item__label">Years Experience</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- /WP Block: stats-section -->
+
+
+    <!-- DESTINATIONS -->
+    <!-- WP Block: destinations -->
+    <section class="section" id="destinations" aria-labelledby="destinations-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Study Abroad</span>
+          <h2 class="section__title" id="destinations-title">Explore Top Destinations</h2>
+          <p class="section__desc mx-auto">Discover world-renowned universities and vibrant cultures in our most popular study destinations.</p>
+        </header>
+
+        <div class="destinations-grid">
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/china-destination.jpg" alt="China" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇨🇳</span>
+              <h3 class="destination-card__name">China</h3>
+              <p class="destination-card__meta">MBBS &amp; Engineering Hub</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/uk-destination.jpg" alt="United Kingdom" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇬🇧</span>
+              <h3 class="destination-card__name">United Kingdom</h3>
+              <p class="destination-card__meta">World-Class Degrees</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/finland-campus.jpg" alt="Finland" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇫🇮</span>
+              <h3 class="destination-card__name">Finland</h3>
+              <p class="destination-card__meta">Tuition-Free Education</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/hungary-university.jpg" alt="Hungary" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇭🇺</span>
+              <h3 class="destination-card__name">Hungary</h3>
+              <p class="destination-card__meta">Affordable European Study</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/newzealand-university.jpg" alt="New Zealand" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇳🇿</span>
+              <h3 class="destination-card__name">New Zealand</h3>
+              <p class="destination-card__meta">Quality of Life</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/singapore-destination.jpg" alt="Singapore" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇸🇬</span>
+              <h3 class="destination-card__name">Singapore</h3>
+              <p class="destination-card__meta">Asia's Education Leader</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/romania-university.jpg" alt="Romania" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇷🇴</span>
+              <h3 class="destination-card__name">Romania</h3>
+              <p class="destination-card__meta">EU-Quality Education</p>
+            </div>
+          </a>
+
+          <a href="services.html#destinations" class="destination-card" data-animate>
+            <img src="images/spain-destination.jpg" alt="Spain" class="destination-card__img" loading="lazy">
+            <div class="destination-card__overlay">
+              <span class="destination-card__flag">🇪🇸</span>
+              <h3 class="destination-card__name">Spain</h3>
+              <p class="destination-card__meta">Vibrant Culture &amp; Learning</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- /WP Block: destinations -->
+
+
+    <!-- TESTIMONIALS PREVIEW -->
+    <!-- WP Block: testimonials-preview -->
+    <section class="section section--light" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__header text-center" data-animate>
+          <span class="section__label">Client Stories</span>
+          <h2 class="section__title" id="testimonials-title">What Our Clients Say</h2>
+          <p class="section__desc mx-auto">Real stories from real students and families who trusted Sri Win Education with their dreams.</p>
+        </header>
+
+        <div class="testimonials-slider">
+          <div class="testimonials-track" id="testimonials-track">
+            <article class="testimonial-card" data-animate>
+              <blockquote class="testimonial-card__quote">
+                Sri Win Education made my dream of studying medicine in China a reality. From visa processing to accommodation, everything was seamless.
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="images/avatar-1.jpg" alt="Tharindu Perera" class="testimonial-card__avatar" loading="lazy">
+                <div>
+                  <p class="testimonial-card__name">Tharindu Perera</p>
+                  <p class="testimonial-card__role">MBBS Student, China</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" data-animate>
+              <blockquote class="testimonial-card__quote">
+                The scholarship guidance I received was exceptional. They helped me secure a full scholarship to study in Finland — completely life-changing.
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="images/avatar-2.jpg" alt="Dilhani Fernando" class="testimonial-card__avatar" loading="lazy">
+                <div>
+                  <p class="testimonial-card__name">Dilhani Fernando</p>
+                  <p class="testimonial-card__role">Engineering Student, Finland</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" data-animate>
+              <blockquote class="testimonial-card__quote">
+                Professional, trustworthy, and incredibly supportive. My entire family recommends Sri Win for anyone looking to study abroad.
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="images/avatar-3.jpg" alt="Rohan Silva" class="testimonial-card__avatar" loading="lazy">
+                <div>
+                  <p class="testimonial-card__name">Rohan Silva</p>
+                  <p class="testimonial-card__role">Business Student, UK</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" data-animate>
+              <blockquote class="testimonial-card__quote">
+                The team went above and beyond to ensure my visa application was flawless. I received my Canadian study permit in just three weeks!
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="images/avatar-4.jpg" alt="Nuwanthi Jayasuriya" class="testimonial-card__avatar" loading="lazy">
+                <div>
+                  <p class="testimonial-card__name">Nuwanthi Jayasuriya</p>
+                  <p class="testimonial-card__role">IT Student, Canada</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="testimonials__controls">
+            <button class="testimonials__btn testimonials__btn--prev" aria-label="Previous testimonial"><i class="ph ph-caret-left"></i></button>
+            <button class="testimonials__btn testimonials__btn--next" aria-label="Next testimonial"><i class="ph ph-caret-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /WP Block: testimonials-preview -->
+
+
+    <!-- CTA BANNER -->
+    <!-- WP Block: cta-banner -->
+    <section class="cta-banner" id="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-banner__inner" data-animate="fade">
+          <h2 class="cta-banner__title" id="cta-title">Ready to Start Your Journey?</h2>
+          <p class="cta-banner__desc">Book a free consultation with our expert counselors and take the first step toward your global education dream.</p>
+          <a href="contact.html" class="btn btn--secondary btn--lg btn--magnetic">Book Free Consultation <i class="ph ph-calendar-check"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- /WP Block: cta-banner -->
+
+  </main>
+  <!-- /MAIN CONTENT -->
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <!-- WP Template Part: footer.php -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">Sri Win <span>Education</span></div>
+          <p class="site-footer__desc">Your trusted partner in global education since 2009. We connect students with world-class universities and provide end-to-end visa, travel, and settlement services.</p>
+        </div>
+
+        <div>
+          <h4 class="site-footer__title">Quick Links</h4>
+          <a href="index.html" class="site-footer__link">Home</a>
+          <a href="why-us.html" class="site-footer__link">Why Us</a>
+          <a href="services.html" class="site-footer__link">Services</a>
+          <a href="scholarship-loans.html" class="site-footer__link">Scholarship &amp; Loans</a>
+          <a href="contact.html" class="site-footer__link">Contact</a>
+        </div>
+
+        <div>
+          <h4 class="site-footer__title">Services</h4>
+          <a href="services.html#visa" class="site-footer__link">Visa Processing</a>
+          <a href="services.html#destinations" class="site-footer__link">Destinations</a>
+          <a href="services.html#business-tours" class="site-footer__link">Business Tours</a>
+          <a href="services.html#airline" class="site-footer__link">Airline &amp; Ticketing</a>
+          <a href="services.html#cargo" class="site-footer__link">Cargo Services</a>
+        </div>
+
+        <div>
+          <h4 class="site-footer__title">Contact Us</h4>
+          <div class="site-footer__contact-item">
+            <i class="ph ph-map-pin"></i>
+            <span>No. 123, Galle Road, Colombo 03, Sri Lanka</span>
+          </div>
+          <div class="site-footer__contact-item">
+            <i class="ph ph-phone"></i>
+            <span>+94 11 234 5678</span>
+          </div>
+          <div class="site-footer__contact-item">
+            <i class="ph ph-envelope"></i>
+            <span>info@sriwineducation.com</span>
+          </div>
+          <div class="site-footer__contact-item">
+            <i class="ph ph-clock"></i>
+            <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">&copy; 2024 Sri Win Education. All rights reserved.</p>
+        <div class="site-footer__socials">
+          <a href="#" class="site-footer__social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /WP Template Part: footer.php -->
+
+  <!-- Application Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE / Editor
+.idea/
+.vscode/
+*.sublime-*
+
+# Archives (old versions)
+old versions/
+*.zip
+
+# Empty dirs
+version6/
+
+# Logs
+*.log

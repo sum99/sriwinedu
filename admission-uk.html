@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study in the UK with Sri Win Education. Undergraduate and postgraduate programs with full visa support.">
+  <title>Study in UK | Admission Open | Sri Win Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <canvas class="preloader__canvas"></canvas>
+    <div class="preloader__content">
+      <div class="preloader__logo">Sri Win <span>Education</span></div>
+      <p class="preloader__tagline">Your Gateway to Global Education</p>
+      <div class="preloader__progress"><div class="preloader__progress-bar"></div></div>
+    </div>
+  </div>
+
+  <header class="site-header site-header--transparent" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo"><img src="images/logo.png" alt="Sri Win Education"></a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Home</a></li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">About Us</a>
+            <div class="main-nav__dropdown">
+              <a href="about.html" class="main-nav__dropdown-link">About SriWin</a>
+              <a href="team.html" class="main-nav__dropdown-link">Management Team</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link main-nav__link--active">Admission Open Now</a>
+            <div class="main-nav__dropdown">
+              <a href="admission-china.html" class="main-nav__dropdown-link">China</a>
+              <a href="admission-finland.html" class="main-nav__dropdown-link">Finland</a>
+              <a href="admission-hungary.html" class="main-nav__dropdown-link">Hungary</a>
+              <a href="admission-newzealand.html" class="main-nav__dropdown-link">New Zealand</a>
+              <a href="admission-singapore.html" class="main-nav__dropdown-link">Singapore</a>
+              <a href="admission-uk.html" class="main-nav__dropdown-link">UK</a>
+              <a href="admission-spain.html" class="main-nav__dropdown-link">Spain</a>
+              <a href="admission-romania.html" class="main-nav__dropdown-link">Romania</a>
+              <a href="admission-sweden.html" class="main-nav__dropdown-link">Sweden</a>
+              <a href="admission-ireland.html" class="main-nav__dropdown-link">Ireland</a>
+              <a href="admission-india.html" class="main-nav__dropdown-link">India</a>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="services.html" class="main-nav__link">Services</a>
+            <div class="main-nav__dropdown">
+              <a href="services.html#visa" class="main-nav__dropdown-link">Visa</a>
+              <a href="services.html#destinations" class="main-nav__dropdown-link">Destination</a>
+              <a href="services.html#business-tours" class="main-nav__dropdown-link">Business Tours</a>
+              <a href="services.html#airline" class="main-nav__dropdown-link">Air Line &amp; Ticketing</a>
+              <a href="services.html#hotel" class="main-nav__dropdown-link">Hotel &amp; Taxi Booking</a>
+              <a href="services.html#cargo" class="main-nav__dropdown-link">Cargo</a>
+              <a href="https://sriwinlankatravels.com/" class="main-nav__dropdown-link main-nav__dropdown-link--external" target="_blank" rel="noopener">In Bound Tours <i class="ph ph-arrow-square-out"></i></a>
+            </div>
+          </li>
+          <li class="main-nav__item"><a href="scholarship-loans.html" class="main-nav__link">Scholarship &amp; Loans</a></li>
+          <li class="main-nav__item"><a href="photo-gallery.html" class="main-nav__link">Photo Gallery</a></li>
+          <li class="main-nav__item"><a href="testimonials.html" class="main-nav__link">Testimonials</a></li>
+          <li class="main-nav__item"><a href="contact.html" class="main-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu"></button>
+    <div class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Home</a></div>
+    <div class="mobile-nav__item"><button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">About Us <i class="ph ph-caret-down"></i></button><div class="mobile-nav__sub"><a href="about.html" class="mobile-nav__sub-link">About SriWin</a><a href="team.html" class="mobile-nav__sub-link">Management Team</a></div></div>
+    <div class="mobile-nav__item"><button class="mobile-nav__link mobile-nav__link--toggle" aria-expanded="false">Admission Open Now <i class="ph ph-caret-down"></i></button><div class="mobile-nav__sub"><a href="admission-china.html" class="mobile-nav__sub-link">China</a><a href="admission-finland.html" class="mobile-nav__sub-link">Finland</a><a href="admission-hungary.html" class="mobile-nav__sub-link">Hungary</a><a href="admission-newzealand.html" class="mobile-nav__sub-link">New Zealand</a><a href="admission-singapore.html" class="mobile-nav__sub-link">Singapore</a><a href="admission-uk.html" class="mobile-nav__sub-link">UK</a><a href="admission-spain.html" class="mobile-nav__sub-link">Spain</a><a href="admission-romania.html" class="mobile-nav__sub-link">Romania</a><a href="admission-sweden.html" class="mobile-nav__sub-link">Sweden</a><a href="admission-ireland.html" class="mobile-nav__sub-link">Ireland</a><a href="admission-india.html" class="mobile-nav__sub-link">India</a></div></div>
+    <div class="mobile-nav__item"><a href="services.html" class="mobile-nav__link">Services</a></div>
+    <div class="mobile-nav__item"><a href="scholarship-loans.html" class="mobile-nav__link">Scholarship &amp; Loans</a></div>
+    <div class="mobile-nav__item"><a href="photo-gallery.html" class="mobile-nav__link">Photo Gallery</a></div>
+    <div class="mobile-nav__item"><a href="testimonials.html" class="mobile-nav__link">Testimonials</a></div>
+    <div class="mobile-nav__item"><a href="contact.html" class="mobile-nav__link">Contact</a></div>
+  </div>
+
+  <main>
+    <section class="country-hero">
+      <div class="country-hero__bg">
+        <img src="images/uk-campus.jpg" alt="UK study abroad" loading="eager">
+      </div>
+      <div class="country-hero__overlay"></div>
+      <div class="country-hero__content">
+        <img src="https://flagcdn.com/w160/gb.png" alt="UK flag" class="country-hero__flag" loading="eager">
+        <span class="section__label" style="color: var(--color-secondary);">Admission Open</span>
+        <h1 class="country-hero__title">Study in the United Kingdom</h1>
+        <p class="country-hero__desc">Home to world-ranking universities, the UK offers prestigious degrees, shorter course durations, and excellent post-study work opportunities.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg btn--magnetic" style="margin-top: var(--space-4);">Apply Now <i class="ph ph-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <section class="section" id="details" aria-labelledby="uk-title">
+      <div class="container">
+        <div class="country-details">
+          <div class="country-details__content" data-animate="slide-left">
+            <span class="section__label">Overview</span>
+            <h2 class="section__title" id="uk-title">Why Study in the UK?</h2>
+            <p>The United Kingdom is home to four of the world's top ten universities and offers a rich academic heritage dating back centuries. A UK degree is recognized and respected by employers and academics worldwide.</p>
+            <p>Undergraduate degrees typically take 3 years (4 in Scotland), and master's degrees just 1 year — saving time and money compared to other popular destinations. The Graduate Route visa allows students to stay and work for up to 2 years after graduation.</p>
+            <h3 style="margin-top: var(--space-4); margin-bottom: var(--space-2);">Popular Programs</h3>
+            <ul style="list-style: disc; padding-left: var(--space-4); margin-bottom: var(--space-4);">
+              <li>Business, Finance &amp; Management</li>
+              <li>Law &amp; International Relations</li>
+              <li>Computer Science &amp; AI</li>
+              <li>Medicine &amp; Healthcare</li>
+              <li>Engineering &amp; Technology</li>
+              <li>Media, Arts &amp; Design</li>
+            </ul>
+            <h3 style="margin-bottom: var(--space-2);">Admission Requirements</h3>
+            <ul style="list-style: disc; padding-left: var(--space-4); margin-bottom: var(--space-4);">
+              <li>A-Level or Foundation qualification</li>
+              <li>IELTS 6.0 – 6.5 (or equivalent)</li>
+              <li>Academic transcripts and references</li>
+              <li>Personal statement</li>
+              <li>Proof of financial capacity (CAS requirement)</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--magnetic">Start Application <i class="ph ph-arrow-right"></i></a>
+          </div>
+
+          <aside class="country-details__sidebar" data-animate="slide-right">
+            <div class="country-info-card">
+              <h4 class="country-info-card__title">Quick Facts</h4>
+              <div class="country-info-card__row"><span class="country-info-card__label">Capital</span><span class="country-info-card__value">London</span></div>
+              <div class="country-info-card__row"><span class="country-info-card__label">Currency</span><span class="country-info-card__value">British Pound (GBP)</span></div>
+              <div class="country-info-card__row"><span class="country-info-card__label">Language</span><span class="country-info-card__value">English</span></div>
+              <div class="country-info-card__row"><span class="country-info-card__label">Tuition (UG)</span><span class="country-info-card__value">GBP 12,000 – 25,000 / year</span></div>
+              <div class="country-info-card__row"><span class="country-info-card__label">Living Cost</span><span class="country-info-card__value">GBP 1,000 – 1,500 / month</span></div>
+              <div class="country-info-card__row"><span class="country-info-card__label">Course Duration</span><span class="country-info-card__value">3 Years (UG) / 1 Year (PG)</span></div>
+              <div class="country-info-card__row"><span class="country-info-card__label">Intake</span><span class="country-info-card__value">September &amp; January</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="cta-uk-title">
+      <div class="container">
+        <div class="cta-banner__inner" data-animate="fade">
+          <h2 class="cta-banner__title" id="cta-uk-title">Begin Your UK Journey</h2>
+          <p class="cta-banner__desc">Applications for September intake are now open. Secure your place at a top UK university with our expert guidance.</p>
+          <a href="contact.html" class="btn btn--secondary btn--lg btn--magnetic">Book Consultation <i class="ph ph-calendar-check"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">Sri Win <span>Education</span></div>
+          <p class="site-footer__desc">Your trusted partner in global education since 2009.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Quick Links</h4>
+          <a href="index.html" class="site-footer__link">Home</a>
+          <a href="why-us.html" class="site-footer__link">Why Us</a>
+          <a href="services.html" class="site-footer__link">Services</a>
+          <a href="scholarship-loans.html" class="site-footer__link">Scholarship &amp; Loans</a>
+          <a href="contact.html" class="site-footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Services</h4>
+          <a href="services.html#visa" class="site-footer__link">Visa Processing</a>
+          <a href="services.html#destinations" class="site-footer__link">Destinations</a>
+          <a href="services.html#business-tours" class="site-footer__link">Business Tours</a>
+          <a href="services.html#airline" class="site-footer__link">Airline &amp; Ticketing</a>
+          <a href="services.html#cargo" class="site-footer__link">Cargo Services</a>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Contact Us</h4>
+          <div class="site-footer__contact-item"><i class="ph ph-map-pin"></i><span>No. 123, Galle Road, Colombo 03, Sri Lanka</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-phone"></i><span>+94 11 234 5678</span></div>
+          <div class="site-footer__contact-item"><i class="ph ph-envelope"></i><span>info@sriwineducation.com</span></div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">&copy; 2024 Sri Win Education. All rights reserved.</p>
+        <div class="site-footer__socials">
+          <a href="#" class="site-footer__social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" class="site-footer__social" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
