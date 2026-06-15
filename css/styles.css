@@ -2102,6 +2102,12 @@ p {
   opacity: 0.15;
 }
 
+.service-feature-row__media img[alt*="Swasthi"] {
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
 .service-feature-row__media .media-badge {
   position: absolute;
   bottom: var(--space-4);
