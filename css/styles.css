@@ -1622,109 +1622,91 @@ p {
 }
 
 /* =========================================================
-   14. TESTIMONIALS
+   14. TRAVEL PARTNER
    ========================================================= */
-.testimonials-slider {
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonials-track {
-  display: flex;
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-4);
-  transition: transform var(--transition-slow);
 }
 
-.testimonial-card {
-  flex: 0 0 100%;
-  max-width: 600px;
+.travel-card {
+  position: relative;
   background: var(--color-white);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
-  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow), border-color var(--transition-base);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 calc(50% - var(--space-2));
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonial-card {
-    flex: 0 0 calc(33.333% - var(--space-3));
-  }
-}
-
-.testimonial-card__quote {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  color: var(--text-heading);
-  line-height: var(--leading-snug);
-  margin-bottom: var(--space-4);
-  position: relative;
-}
-
-.testimonial-card__quote::before {
-  content: '"';
-  font-size: 4rem;
-  line-height: 1;
-  color: var(--color-primary);
-  opacity: 0.15;
+.travel-card::before {
+  content: '';
   position: absolute;
-  top: -12px;
-  left: -8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
 }
 
-.testimonial-card__author {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+.travel-card:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
 }
 
-.testimonial-card__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
-  object-fit: cover;
+.travel-card:hover::before {
+  transform: scaleX(1);
 }
 
-.testimonial-card__name {
-  font-weight: 600;
-  color: var(--text-heading);
-  font-size: var(--text-sm);
-}
-
-.testimonial-card__role {
-  font-size: var(--text-xs);
-  color: var(--text-muted);
-}
-
-.testimonials__controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  margin-top: var(--space-6);
-}
-
-.testimonials__btn {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-full);
-  border: 1.5px solid var(--color-gray-300);
+.travel-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(204,17,17,0.08), rgba(241,192,42,0.08));
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-heading);
-  transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+  transition: transform var(--transition-bounce), background var(--transition-base);
 }
 
-.testimonials__btn:hover {
-  border-color: var(--color-primary);
-  background: var(--color-primary);
-  color: var(--color-white);
+.travel-card:hover .travel-card__icon {
+  transform: scale(1.1) rotate(-5deg);
+  background: linear-gradient(135deg, rgba(204,17,17,0.15), rgba(241,192,42,0.15));
+}
+
+.travel-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.travel-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-3);
+}
+
+.travel-partner__cta {
+  margin-top: var(--space-8);
+}
+
+.travel-partner__cta-desc {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 /* =========================================================

@@ -41,10 +41,7 @@
     mobileNavLinks: '.mobile-nav__link',
     marqueeTrack: '.marquee__track',
     statNumbers: '.stat-item__number',
-    testimonialsTrack: '.testimonials-track',
-    testimonialsCards: '.testimonial-card',
-    testimonialsPrev: '.testimonials__btn--prev',
-    testimonialsNext: '.testimonials__btn--next',
+
     videoTrack: '.video-carousel__track',
     videoPrev: '.video-carousel__btn--prev',
     videoNext: '.video-carousel__btn--next',
@@ -70,7 +67,7 @@
 
   const STATE = {
     isLoaded: false,
-    testimonialsIndex: 0,
+
     videoIndex: 0,
     lightboxIndex: 0,
     galleryFiltered: [],
@@ -657,58 +654,7 @@
   }
 
   /* =========================================================
-     12. TESTIMONIALS SLIDER
-     ========================================================= */
-  function initTestimonialsSlider() {
-    const track = getElement(SELECTORS.testimonialsTrack);
-    const prevBtn = getElement(SELECTORS.testimonialsPrev);
-    const nextBtn = getElement(SELECTORS.testimonialsNext);
-    const cards = getElements(SELECTORS.testimonialsCards);
-
-    if (!track || cards.length === 0) return;
-
-    let currentIndex = 0;
-    const totalSlides = cards.length;
-
-    function getSlidesPerView() {
-      if (window.innerWidth >= 1024) return 3;
-      if (window.innerWidth >= 768) return 2;
-      return 1;
-    }
-
-    function updateSlider() {
-      const slidesPerView = getSlidesPerView();
-      const maxIndex = Math.max(0, totalSlides - slidesPerView);
-      currentIndex = clamp(currentIndex, 0, maxIndex);
-
-      const slideWidth = cards[0].offsetWidth;
-      const gap = parseFloat(getComputedStyle(track).gap) || 16;
-      const offset = currentIndex * (slideWidth + gap);
-      track.style.transform = `translateX(-${offset}px)`;
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        currentIndex = Math.max(0, currentIndex - 1);
-        updateSlider();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        const slidesPerView = getSlidesPerView();
-        const maxIndex = Math.max(0, totalSlides - slidesPerView);
-        currentIndex = Math.min(maxIndex, currentIndex + 1);
-        updateSlider();
-      });
-    }
-
-    window.addEventListener('resize', updateSlider);
-    updateSlider();
-  }
-
-  /* =========================================================
-     13. VIDEO CAROUSEL
+     12. VIDEO CAROUSEL
      ========================================================= */
   function initVideoCarousel() {
     const track = getElement(SELECTORS.videoTrack);
@@ -1065,7 +1011,6 @@
     initMagneticButtons();
     initMarquee();
     initStatsCounters();
-    initTestimonialsSlider();
     initVideoCarousel();
     initGallery();
     initFaqAccordion();
